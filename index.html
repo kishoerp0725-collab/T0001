@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>erpnext.lk — AI employees that actually do the work in ERPNext</title>
+<meta name="description" content="Business process automation with ERPNext v16 + AI. Invoice, payroll, inventory and CRM on autopilot.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- Navbar (floating pill — reference design style) -->
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <span class="logo-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg></span>
+    <span><span class="logo-name">erpnext<span style="color:var(--blue)">.lk</span></span><br><span class="logo-sub">AI AUTOMATION</span></span>
+  </a>
+  <nav class="nav-links">
+    <div class="dropdown">
+      <button class="nav-link dropdown-toggle">Product <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="dropdown-menu">
+        <a class="product-row" href="ai-employees.html"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><span><b>AI Employees</b><span>Specialist agents for sales, support &amp; ops</span></span></a>
+        <a class="product-row" href="browser-agent.html"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span><span><b>In-Browser Agent</b><span>Clicks, types &amp; extracts across the web</span></span></a>
+        <a class="product-row" href="marketplace.html"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l1-5h16l1 5M4 9v11h16V9M9 13h6"/></svg></span><span><b>Agent Marketplace</b><span>226 ready-to-deploy agent templates</span></span></a>
+        <a class="product-row" href="how-it-works.html"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><span><b>How It Works</b><span>Three steps, about ten minutes</span></span></a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="index.html#board">Live Demo <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px"><path d="M6 9l6 6 6-6"/></svg></a>
+      <div class="dropdown-menu">
+        <a class="product-row" href="index.html#board"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg></span><span><b>Live Task Board</b><span>Watch AI employees work in real time</span></span></a>
+        <a class="product-row" href="index.html#slack"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 01-8.5 8.5c-1.6 0-3.1-.4-4.4-1.2L3 20l1.2-5.1A8.5 8.5 0 1121 11.5z"/></svg></span><span><b>Slack in Action</b><span>See @erpnext commands live in channels</span></span></a>
+        <a class="product-row" href="index.html#how"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3z"/></svg></span><span><b>Hand It Off</b><span>How approval gates keep you in charge</span></span></a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="marketplace.html">Marketplace <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px"><path d="M6 9l6 6 6-6"/></svg></a>
+      <div class="dropdown-menu">
+        <a class="product-row" href="marketplace.html"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l1-5h16l1 5M4 9v11h16V9M9 13h6"/></svg></span><span><b>All 226 Agents</b><span>Browse the full template catalog</span></span></a>
+        <a class="product-row" href="marketplace.html"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></span><span><b>By Category</b><span>Accounts, Sales, Support, Ops, Content</span></span></a>
+        <a class="product-row" href="ai-employees.html"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><span><b>Employee vs Agent</b><span>Which one does your team need?</span></span></a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="index.html#pricing">Pricing <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px"><path d="M6 9l6 6 6-6"/></svg></a>
+      <div class="dropdown-menu">
+        <a class="product-row" href="index.html#pricing"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.4-6.3-4.5-6.3 4.5L8 13.6 2 9.2h7.6z"/></svg></span><span><b>Growth — $49/mo</b><span>5,000 credits, first automations</span></span></a>
+        <a class="product-row" href="index.html#pricing"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.4-6.3-4.5-6.3 4.5L8 13.6 2 9.2h7.6z"/></svg></span><span><b>Pro — $99/mo</b><span>12,000 credits, team approvals</span></span></a>
+        <a class="product-row" href="index.html#pricing"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.4-6.3-4.5-6.3 4.5L8 13.6 2 9.2h7.6z"/></svg></span><span><b>Scale — $299/mo</b><span>40,000 credits, multi-branch</span></span></a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="index.html#faq">FAQ <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px"><path d="M6 9l6 6 6-6"/></svg></a>
+      <div class="dropdown-menu">
+        <a class="product-row" href="index.html#faq"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 115.1 2c-.8 1-2.1 1.3-2.1 2.5M12 17h.01"/></svg></span><span><b>What is erpnext.lk?</b><span>The 60-second answer</span></span></a>
+        <a class="product-row" href="index.html#faq"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></span><span><b>Approval Gates</b><span>How your money stays protected</span></span></a>
+        <a class="product-row" href="index.html#faq"><span class="product-icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><span><b>Employee vs Agent</b><span>Which one does your team need?</span></span></a>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-cta">
+    <button class="btn btn-ghost" data-modal="Sign in to Workspace" data-modal-desc="Workspace access is provisioned per client on the company ERPNext instance. Contact info@erpnext.lk to request access.">Sign in</button>
+    <button class="btn btn-primary" data-modal="Start 7-Day Free Trial" data-modal-desc="We'll set up a sandbox ERPNext v16 workspace with 3 starter AI employees for you. Reply to this with your company name and we'll provision it within 1 business day.">Get started</button>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+<nav id="mobileNav" class="mobile-nav">
+  <a href="index.html#board">Live Demo</a>
+  <a href="ai-employees.html">AI Employees</a>
+  <a href="browser-agent.html">Browser Agent</a>
+  <a href="marketplace.html">Marketplace</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="index.html#faq">FAQ</a>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container">
+    <div class="badge-live"><span class="dot"></span> ERPNext v16 + AI agent platform · no code required</div>
+    <h1 class="h1" style="animation:fade-in-up .7s ease-out both">AI employees that actually<br>do the work <span style="position:relative">inside <span style="color:var(--blue)">ERPNext</span></span>.</h1>
+    <p class="lede" style="animation:fade-in-up .7s ease-out .1s both">Give each AI employee a job in plain English, the apps it can use, and the approval gates you control. They work inside ERPNext, Gmail, Slack and 1,500+ other apps.</p>
+    <div class="hero-cta" style="animation:fade-in-up .7s ease-out .2s both">
+      <button class="btn btn-primary" data-modal="Start 7-Day Free Trial" data-modal-desc="We'll set up a sandbox ERPNext v16 workspace with 3 starter AI employees. Send your company name to info@erpnext.lk and we'll provision it within 1 business day.">Start 7-day free trial <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <a class="btn btn-ghost" href="#board"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3z"/></svg> Watch the board work</a>
+    </div>
+    <div style="margin:1.6rem auto 0;max-width:34rem;text-align:left">
+      <div style="display:flex;align-items:center;gap:.7rem;background:#fff;border:1px solid var(--ink-12);border-radius:.9rem;padding:.8rem 1.1rem;box-shadow:0 1px 3px #0000001a">
+        <span class="cursor-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 8-6 1.5L16 19l-3 1.5-3-6.5L5 17z"/></svg> Tell an agent</span>
+        <span id="typer" style="font-size:.9rem;color:var(--ink-70)"></span>
+      </div>
+    </div>
+
+    <!-- LIVE TASK BOARD (the reference board-bob / board-blip / board-rise) -->
+    <div class="board" id="board">
+      <div class="board-top">
+        <div style="display:flex;align-items:center;gap:.8rem">
+          <div class="dots"><i class="d1"></i><i class="d2"></i><i class="d3"></i></div>
+          <span class="board-url">erpnext.lk / workspace / tasks</span>
+        </div>
+        <div class="sync-pill"><span class="dot"></span> Live sync active</div>
+      </div>
+      <div class="board-grid">
+        <div class="col" id="col-backlog">
+          <div class="col-head">Backlog <span class="count">2</span></div>
+          <div class="task" data-modal="Task: Compare payroll providers" data-modal-desc="Assigned to the Lead Researcher agent. It will pull rates for 3 providers for a 12-person Colombo team and write a comparison doc to your Desk.">
+            <div class="task-meta"><span class="tag tag-normal">Normal</span><span>by Jordan</span></div>
+            <div class="task-title">Compare 3 payroll providers for a 12-person Colombo team</div>
+          </div>
+          <div class="task" data-modal="Task: October newsletter" data-modal-desc="Assigned to the Content Marketer. It will draft the newsletter from this month's release notes and stage it for your approval in the website CMS.">
+            <div class="task-meta"><span class="tag tag-low">Low</span><span>by you</span></div>
+            <div class="task-title">Draft October client newsletter from release notes</div>
+          </div>
+        </div>
+        <div class="col col-amber" id="col-you">
+          <div class="col-head"><span><span class="pulse-dot" style="vertical-align:1px;margin-right:.35rem"></span>Needs you</span><span class="count" style="background:rgba(192,255,115,.12);color:var(--green)">1</span></div>
+          <div class="task" style="border-color:rgba(192,255,115,.35)">
+            <div class="task-meta"><span class="tag tag-high">High</span><span style="color:var(--green)">Approval pending</span></div>
+            <div class="task-title">Chase overdue invoice #INV-1187 — Acme PLC, LKR 820,000</div>
+            <div class="task-agent"><b>Invoice Chaser</b><button class="approve-btn" data-modal="Invoice chase approved ✓" data-modal-desc="The agent will send a polite first reminder to accounts@acme.lk via Gmail and log it against Sales Invoice INV-1187 in ERPNext.">Review on Desk →</button></div>
+          </div>
+        </div>
+        <div class="col" id="col-flight">
+          <div class="col-head"><span style="color:#93b4fd"><span class="pulse-dot" style="background:#93b4fd;vertical-align:1px;margin-right:.35rem"></span>In flight</span><span class="count" style="background:rgba(59,130,246,.15);color:#93b4fd">1</span></div>
+          <div class="task" id="liveTask">
+            <div class="task-meta"><span class="tag tag-normal">Normal</span><span style="color:#93b4fd">Step 1 of 5</span></div>
+            <div class="task-title">Run October payroll for 42 employees across 3 branches</div>
+            <div class="task-agent"><b>Payroll Runner</b><span><span class="spin" style="color:#93b4fd">◌</span> started now</span></div>
+          </div>
+        </div>
+        <div class="col" id="col-done">
+          <div class="col-head"><span style="color:#a5f3b4">Done</span><span class="count" style="background:rgba(192,255,115,.1);color:#a5f3b4">3</span></div>
+          <div class="task done-task" data-modal="Completed: Bank reconciliation" data-modal-desc="Reconciled CMB current account with the ERPNext GL for September. 118 of 118 entries matched, 0 exceptions.">
+            <div class="task-meta"><span style="color:#a5f3b4;font-weight:600">Completed</span><span>2h ago</span></div>
+            <div class="task-title">Reconciled bank statement with the ERPNext general ledger</div>
+          </div>
+          <div class="task done-task" data-modal="Completed: Ticket summary" data-modal-desc="Summarised last week's 34 support tickets into 3 recurring themes and filed 2 product issues in the ERPNext Issue tracker.">
+            <div class="task-meta"><span style="color:#a5f3b4;font-weight:600">Completed</span><span>5h ago</span></div>
+            <div class="task-title">Summarised last week's support tickets in ERPNext</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTEGRATIONS MARQUEE ================= -->
+<section class="section-soft" style="padding:3rem 0">
+  <div class="container"><div class="section-label">Your AI employees work inside the apps you already use</div></div>
+  <div class="marquee-wrap" style="--gap:1.5rem">
+    <div class="marquee-track">
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/></svg> ERPNext v16</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ea4335" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Gmail</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#611f69" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 01-8.5 8.5c-1.6 0-3.1-.4-4.4-1.2L3 20l1.2-5.1A8.5 8.5 0 1121 11.5z"/></svg> Slack</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0f1117" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg> Notion</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff7a59" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-5.5 6.5-5.5s6.5 1.9 6.5 5.5"/></svg> HubSpot</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00a1e0" stroke-width="2"><path d="M17.5 19a4.5 4.5 0 100-9 6 6 0 00-11.3 2A4 4 0 006 19z"/></svg> Salesforce</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b894" stroke-width="2"><path d="M4 13a8 8 0 0116 0v5a2 2 0 01-2 2h-1v-6h3M4 13v5a2 2 0 002 2h1v-6H4"/></svg> Zendesk</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#635bff" stroke-width="2"><rect x="2.5" y="5.5" width="19" height="13" rx="2.5"/><path d="M2.5 10h19"/></svg> Stripe</span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/></svg> ERPNext v16</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ea4335" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Gmail</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#611f69" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 01-8.5 8.5c-1.6 0-3.1-.4-4.4-1.2L3 20l1.2-5.1A8.5 8.5 0 1121 11.5z"/></svg> Slack</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0f1117" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg> Notion</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff7a59" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-5.5 6.5-5.5s6.5 1.9 6.5 5.5"/></svg> HubSpot</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00a1e0" stroke-width="2"><path d="M17.5 19a4.5 4.5 0 100-9 6 6 0 00-11.3 2A4 4 0 006 19z"/></svg> Salesforce</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b894" stroke-width="2"><path d="M4 13a8 8 0 0116 0v5a2 2 0 01-2 2h-1v-6h3M4 13v5a2 2 0 002 2h1v-6H4"/></svg> Zendesk</span>
+      <span class="marquee-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#635bff" stroke-width="2"><rect x="2.5" y="5.5" width="19" height="13" rx="2.5"/><path d="M2.5 10h19"/></svg> Stripe</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS (3 steps) ================= -->
+<section class="section" id="features"><span id="how" style="position:relative;top:-6rem;display:block;height:0"></span>
+  <div class="container center reveal">
+    <span class="eyebrow">How it works</span>
+    <h2 class="h2">Hand it off. Stay in charge.</h2>
+    <p class="lede">Three steps. About ten minutes. Every agent runs behind approval gates you set.</p>
+  </div>
+  <div class="container" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem">
+    <div class="step-card reveal" style="text-align:left">
+      <div class="step-num-big">01</div>
+      <h3 class="h3" style="margin:.6rem 0 .4rem">Describe the job</h3>
+      <p style="color:var(--ink-70);font-size:.92rem">Write the task in plain English and pick which apps the agent can touch. No code, no config files.</p>
+    </div>
+    <div class="step-card reveal" style="text-align:left;transition-delay:.1s">
+      <div class="step-num-big">02</div>
+      <h3 class="h3" style="margin:.6rem 0 .4rem">Watch it work</h3>
+      <p style="color:var(--ink-70);font-size:.92rem">Follow every action live on your workspace board or in Slack. You can pause or take over at any step.</p>
+    </div>
+    <div class="step-card reveal" style="text-align:left;transition-delay:.2s">
+      <div class="step-num-big">03</div>
+      <h3 class="h3" style="margin:.6rem 0 .4rem">Approve what matters</h3>
+      <p style="color:var(--ink-70);font-size:.92rem">Money moves, client emails and critical records pause for your one-click approval. The rest just ships.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AGENT GALLERY (the reference AgentGallery fanned cards) ================= -->
+<section class="section" id="agents" style="padding-top:2rem">
+  <div class="container center reveal">
+    <span class="eyebrow">Agent marketplace</span>
+    <h2 class="h2">Hire a specialist in a click.</h2>
+    <p class="lede">Pick a ready-made AI employee for sales, support or finance — or describe a new one in plain English.</p>
+  </div>
+  <div class="container" style="margin-top:2.5rem">
+    <div class="agent-pills">
+      <button class="pill active" data-agent="support">01 · Customer Support</button>
+      <button class="pill" data-agent="sales">02 · Inbound Qualifier</button>
+      <button class="pill" data-agent="ar">03 · AR Collections</button>
+      <button class="pill" data-agent="content">04 · Content Marketer</button>
+      <a class="pill" href="marketplace.html" style="border-style:dashed">Browse all 226 →</a>
+    </div>
+
+    <div class="agent-panel-slot" data-agent="support">
+      <div class="agent-panel">
+        <div>
+          <span class="eyebrow">Customer support</span>
+          <h3 class="h3" style="font-size:1.7rem;margin-bottom:.6rem">Handles tier-1 tickets in ERPNext and escalates the rest.</h3>
+          <p style="color:var(--ink-70);font-size:.95rem;margin-bottom:1.4rem">Connected to your Zendesk queue and the ERPNext Helpdesk doctype, Emily resolves routine tickets instantly and files bugs with full context attached.</p>
+          <div class="step-row"><span class="step-num">1</span><span style="font-size:.85rem"><b>Reading Zendesk ticket #4821</b><br><span style="color:var(--ink-50)">Meridian Corp reports broken CSV export in ERPNext payroll.</span></span></div>
+          <div class="step-row"><span class="step-num">2</span><span style="font-size:.85rem"><b>Checking account plan in Stripe</b><br><span style="color:var(--ink-50)">Verified active Enterprise subscription — full entitlements.</span></span></div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-card-head">
+            <div style="display:flex;align-items:center;gap:.8rem">
+              <div class="avatar" style="background:#0f1117">E</div>
+              <div><div style="font-weight:650">Emily · Support Specialist</div><div class="status-live">Active in ERPNext</div></div>
+            </div>
+            <span class="pill" style="background:#fef3c7;border-color:#fde68a;color:#92400e;padding:.3rem .7rem;font-size:.7rem">Needs your OK</span>
+          </div>
+          <div class="log-box">BUG-4192 · Meridian Corp: ERPNext CSV export fails on payroll items. Drafted a fix-confirmation reply — waiting on your approval.</div>
+          <div style="display:flex;gap:.7rem">
+            <button class="btn btn-primary" style="flex:1" data-modal="Reply approved &amp; sent ✓" data-modal-desc="Emily sent the drafted reply to Meridian Corp via Zendesk and attached the bug context to ERPNext Issue BUG-4192.">Approve &amp; send reply</button>
+            <button class="btn btn-ghost" data-modal="Reply declined" data-modal-desc="No reply sent. The ticket stays open in your queue for manual handling.">Decline</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="agent-panel-slot" data-agent="sales" style="display:none">
+      <div class="agent-panel">
+        <div>
+          <span class="eyebrow" style="background:#dcfce7;color:#15803d">Inbound sales</span>
+          <h3 class="h3" style="font-size:1.7rem;margin-bottom:.6rem">Qualifies inbound leads and writes them straight into ERPNext CRM.</h3>
+          <p style="color:var(--ink-70);font-size:.95rem;margin-bottom:1.4rem">Quinn enriches every form submission, scores intent, routes hot leads to the right owner, and books meetings onto your sales calendar.</p>
+          <div class="step-row"><span class="step-num" style="background:#15803d">1</span><span style="font-size:.85rem"><b>Enriching lead from website form</b><br><span style="color:var(--ink-50)">Apex Industries · 150 employees · Colombo</span></span></div>
+          <div class="step-row"><span class="step-num" style="background:#15803d">2</span><span style="font-size:.85rem"><b>Creating ERPNext Lead + Opportunity</b><br><span style="color:var(--ink-50)">Source: website form · Score 92/100 · Owner: Priya</span></span></div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-card-head">
+            <div style="display:flex;align-items:center;gap:.8rem">
+              <div class="avatar" style="background:#15803d">Q</div>
+              <div><div style="font-weight:650">Quinn · Lead Qualifier</div><div class="status-live">Active in ERPNext CRM</div></div>
+            </div>
+            <span class="pill" style="background:#dcfce7;border-color:#bbf7d0;color:#15803d;padding:.3rem .7rem;font-size:.7rem">Hot lead · 92/100</span>
+          </div>
+          <div class="log-box">Lead qualified. ERPNext Lead LIA-2026-118 + Opportunity created. Demo booked Thursday 10:00 with Priya's calendar synced.</div>
+          <button class="btn btn-primary" style="width:100%;background:#15803d" data-modal="CRM record opened" data-modal-desc="ERPNext Lead LIA-2026-118 (Apex Industries). Opportunity: ERPNext implementation · Stage: Demo. Owner: Priya.">View the CRM record</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="agent-panel-slot" data-agent="ar" style="display:none">
+      <div class="agent-panel">
+        <div>
+          <span class="eyebrow" style="background:#f3e8ff;color:#7e22ce">Accounts receivable</span>
+          <h3 class="h3" style="font-size:1.7rem;margin-bottom:.6rem">Chases overdue invoices and flags risk before it becomes a bad debt.</h3>
+          <p style="color:var(--ink-70);font-size:.95rem;margin-bottom:1.4rem">Arthur reads ERPNext Sales Invoices, sends personalised payment reminders over Gmail and WhatsApp, and queues anything over your threshold for review.</p>
+          <div class="step-row"><span class="step-num" style="background:#7e22ce">1</span><span style="font-size:.85rem"><b>Scanning open invoices</b><br><span style="color:var(--ink-50)">14 overdue · LKR 4.6M total outstanding</span></span></div>
+          <div class="step-row"><span class="step-num" style="background:#7e22ce">2</span><span style="font-size:.85rem"><b>Reminders sent via Gmail + WhatsApp</b><br><span style="color:var(--ink-50)">10 delivered · 1 over threshold held for you</span></span></div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-card-head">
+            <div style="display:flex;align-items:center;gap:.8rem">
+              <div class="avatar" style="background:#7e22ce">A</div>
+              <div><div style="font-weight:650">Arthur · AR Collector</div><div class="status-live">Active in ERPNext Accounts</div></div>
+            </div>
+            <span class="pill" style="background:#f3e8ff;border-color:#e9d5ff;color:#7e22ce;padding:.3rem .7rem;font-size:.7rem">1 held over threshold</span>
+          </div>
+          <div class="log-box">INV-1187 (LKR 820,000, 30 days overdue, Acme PLC) is above your LKR 500,000 threshold. Reminder drafted — needs your sign-off.</div>
+          <button class="btn btn-primary" style="width:100%;background:#7e22ce" data-modal="Reminder approved &amp; sent ✓" data-modal-desc="Arthur sent the payment reminder for INV-1187 to accounts@acmeplc.lk and logged the follow-up as a Payment Terms reminder in ERPNext.">Approve &amp; send reminder</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="agent-panel-slot" data-agent="content" style="display:none">
+      <div class="agent-panel">
+        <div>
+          <span class="eyebrow" style="background:#dbeafe;color:#1d4ed8">Content marketing</span>
+          <h3 class="h3" style="font-size:1.7rem;margin-bottom:.6rem">Writes SEO articles in your brand voice and stages them for review.</h3>
+          <p style="color:var(--ink-70);font-size:.95rem;margin-bottom:1.4rem">Chloe researches keywords, drafts 1,200+ word articles and stages them in your website CMS — with sources cited and slugs pre-filled.</p>
+          <div class="step-row"><span class="step-num" style="background:#1d4ed8">1</span><span style="font-size:.85rem"><b>Keyword research</b><br><span style="color:var(--ink-50)">"erpnext payroll Sri Lanka" · 320/mo · KD 12</span></span></div>
+          <div class="step-row"><span class="step-num" style="background:#1d4ed8">2</span><span style="font-size:.85rem"><b>Draft staged in CMS</b><br><span style="color:var(--ink-50)">POST-0142 · 1,240 words · 3 sources cited</span></span></div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-card-head">
+            <div style="display:flex;align-items:center;gap:.8rem">
+              <div class="avatar" style="background:#1d4ed8">C</div>
+              <div><div style="font-weight:650">Chloe · Content Writer</div><div class="status-live">Active in Website CMS</div></div>
+            </div>
+            <span class="pill" style="background:#dbeafe;border-color:#bfdbfe;color:#1d4ed8;padding:.3rem .7rem;font-size:.7rem">Draft staged</span>
+          </div>
+          <div class="log-box">POST-0142: "How to run payroll in ERPNext without a finance hire" — 1,240 words, meta description written, ready for your review.</div>
+          <button class="btn btn-primary" style="width:100%;background:#1d4ed8" data-modal="Draft opened in CMS" data-modal-desc="POST-0142 is staged in the website CMS. Approve to publish, or edit inline first. Scheduled publish slot: next Tuesday 09:00.">Review the draft</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SLACK (dark, slack-in animation) ================= -->
+<section class="section dark-section" id="slack">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center">
+      <div class="reveal">
+        <span class="eyebrow" style="background:rgba(192,255,115,.1);color:var(--green)">Slack integration</span>
+        <h2 class="h2">Your AI employees, one @erpnext away.</h2>
+        <p class="lede" style="margin-bottom:1.8rem">Every agent has a name. Say it in any channel and the right one gets to work inside ERPNext.</p>
+        <div style="display:flex;gap:.5rem;margin-bottom:1.4rem">
+          <button class="pill active" data-channel="finance" style="background:#1a1d29;border-color:#2a2e42;color:#c8cbda">#finance</button>
+          <button class="pill" data-channel="sales" style="background:#1a1d29;border-color:#2a2e42;color:#c8cbda">#sales-pipeline</button>
+          <button class="pill" data-channel="support" style="background:#1a1d29;border-color:#2a2e42;color:#c8cbda">#support-triage</button>
+        </div>
+        <div style="background:#12141d;border:1px solid #1f2230;border-radius:.9rem;padding:.9rem 1.1rem;font-family:'Geist Mono',monospace;font-size:.85rem;color:#d5d8e2">
+          <span style="color:#c0ff73">@erpnext</span> <span data-channel-text="finance">chase overdue invoices, hold anything over LKR 500k for me</span>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <div class="slack-window">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:1rem;margin-bottom:1.1rem;border-bottom:1px solid #1f2230">
+            <span style="font-weight:650;font-size:.9rem;color:#c8cbda"><span style="color:#c0ff73">#</span> <span data-channel-name="finance">finance</span></span>
+            <span style="font-size:.7rem;color:#5b6172">Today 9:15 AM</span>
+          </div>
+          <div class="slack-scene" data-channel="finance">
+            <div class="msg"><div class="msg-avatar" style="background:#007956">ML</div><div><div class="msg-name">Marcus Lee <span class="msg-time">9:14 AM</span></div><div class="msg-text">@erpnext chase overdue invoices, hold anything over LKR 500k for me</div></div></div>
+            <div class="msg msg-bot" style="animation-delay:.25s"><div class="msg-avatar" style="background:#0f1117;border:1px solid #2a2e42;color:#c0ff73">LK</div><div><div class="msg-name" style="color:#93b4fd">ERPNext.LK <span class="app-badge">APP</span> <span class="msg-time">9:15 AM</span></div><div class="msg-text">Done. 10 payment reminders sent via Gmail &amp; WhatsApp. 1 invoice is over LKR 500k (#INV-1187) — waiting on your review on your Desk.</div></div></div>
+          </div>
+          <div class="slack-scene" data-channel="sales" style="display:none">
+            <div class="msg"><div class="msg-avatar" style="background:#1d4ed8">PS</div><div><div class="msg-name">Priya Silva <span class="msg-time">11:02 AM</span></div><div class="msg-text">@erpnext summarise this week's closed-won deals into the pipeline report</div></div></div>
+            <div class="msg msg-bot" style="animation-delay:.25s"><div class="msg-avatar" style="background:#0f1117;border:1px solid #2a2e42;color:#c0ff73">LK</div><div><div class="msg-name" style="color:#93b4fd">ERPNext.LK <span class="app-badge">APP</span> <span class="msg-time">11:03 AM</span></div><div class="msg-text">4 deals closed won this week, LKR 12.4M total. Updated 9 Opportunities in ERPNext and posted the summary to #sales-pipeline.</div></div></div>
+          </div>
+          <div class="slack-scene" data-channel="support" style="display:none">
+            <div class="msg"><div class="msg-avatar" style="background:#b45309">DW</div><div><div class="msg-name">Dilshan W. <span class="msg-time">2:41 PM</span></div><div class="msg-text">@erpnext scan the support queue for anything urgent</div></div></div>
+            <div class="msg msg-bot" style="animation-delay:.25s"><div class="msg-avatar" style="background:#0f1117;border:1px solid #2a2e42;color:#c0ff73">LK</div><div><div class="msg-name" style="color:#93b4fd">ERPNext.LK <span class="app-badge">APP</span> <span class="msg-time">2:42 PM</span></div><div class="msg-text">Scanned 14 tickets. 2 high-priority: broken CSV export (Meridian) and a payroll date bug. Both filed as ERPNext Issues and assigned to Platform.</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="section" id="pricing">
+  <div class="container center reveal">
+    <span class="eyebrow">Pricing</span>
+    <h2 class="h2">Simple pricing. Unlimited agents.</h2>
+    <p class="lede" style="margin-top:.8rem">Every plan includes all AI employees, unlimited integrations and native ERPNext v16 connectivity.</p>
+  </div>
+  <div class="container" style="margin-top:3rem">
+    <div class="price-grid">
+      <div class="price-card card-hover reveal">
+        <h3 class="h3">Growth</h3>
+        <p class="price-desc">For founders putting their first ERP automations to work.</p>
+        <div style="display:flex;align-items:baseline;gap:.3rem;margin-bottom:1.6rem"><span class="price-num">$49</span><span style="color:var(--ink-50);font-size:.9rem">/month</span></div>
+        <ul class="price-list">
+          <li><span class="chk">✓</span> Unlimited AI employees</li>
+          <li><span class="chk">✓</span> 5,000 credits / month</li>
+          <li><span class="chk">✓</span> Connect to 1,500+ apps</li>
+          <li><span class="chk">✓</span> Native ERPNext v16 link</li>
+        </ul>
+        <button class="btn btn-ghost" data-modal="Growth plan selected — $49/mo" data-modal-desc="Tell us where to send the sandbox workspace and the Growth plan invoice draft. No charge until you approve the first invoice.">Get started</button>
+      </div>
+      <div class="price-card featured card-hover reveal" style="transition-delay:.1s">
+        <span class="price-badge">Most popular</span>
+        <h3 class="h3" style="color:#fff">Pro</h3>
+        <p class="price-desc">For teams running sales, support and finance in parallel.</p>
+        <div style="display:flex;align-items:baseline;gap:.3rem;margin-bottom:1.6rem"><span class="price-num" style="color:#fff">$99</span><span style="color:#a5aab8;font-size:.9rem">/month</span></div>
+        <ul class="price-list">
+          <li><span class="chk">✓</span> Unlimited AI employees</li>
+          <li><span class="chk">✓</span> 12,000 credits / month</li>
+          <li><span class="chk">✓</span> Shared workspace &amp; team approvals</li>
+          <li><span class="chk">✓</span> Priority support (Colombo + Mumbai hours)</li>
+        </ul>
+        <button class="btn" style="background:var(--green);color:var(--ink);font-weight:700" data-modal="Pro plan selected — $99/mo" data-modal-desc="Tell us your company name and the apps you want connected first. We'll provision the Pro workspace within 1 business day.">Get started</button>
+      </div>
+      <div class="price-card card-hover reveal" style="transition-delay:.2s">
+        <h3 class="h3">Scale</h3>
+        <p class="price-desc">For enterprises running multi-branch ERPNext production.</p>
+        <div style="display:flex;align-items:baseline;gap:.3rem;margin-bottom:1.6rem"><span class="price-num">$299</span><span style="color:var(--ink-50);font-size:.9rem">/month</span></div>
+        <ul class="price-list">
+          <li><span class="chk">✓</span> Unlimited AI employees</li>
+          <li><span class="chk">✓</span> 40,000 credits / month</li>
+          <li><span class="chk">✓</span> Multi-branch &amp; multi-workspace</li>
+          <li><span class="chk">✓</span> Dedicated implementation engineer</li>
+        </ul>
+        <button class="btn btn-ghost" data-modal="Scale plan selected — $299/mo" data-modal-desc="We'll set up a 30-minute architecture call to map your branches and rollout plan before provisioning.">Book a call</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section section-soft" id="faq">
+  <div class="container center reveal" style="max-width:44rem">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="h2" style="margin-bottom:2.5rem">Frequently asked questions</h2>
+    <div style="text-align:left">
+      <div class="faq-item">
+        <button class="faq-q">What is erpnext.lk? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-a"><p>We're a business process automation consultancy built on ERPNext v16 + AI. We deploy autonomous AI employees that run invoicing, inventory, payroll and CRM workflows inside your existing ERPNext instance — for businesses in Sri Lanka and India.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do I need to change my existing ERPNext setup? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-a"><p>No. Agents connect securely over OAuth and Frappe Assistant Core (FAC) APIs. They work with your existing DocTypes, workflows and custom scripts — nothing to migrate, nothing to rebuild.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do approval gates protect my money and data? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-a"><p>Before an agent moves money, sends a client message or modifies a critical record, the workflow pauses. The decision lands on your Desk or in Slack for one-click approval. You set the thresholds; you stay in charge.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What does an "AI employee" mean versus an "AI agent"? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-a"><p>An AI agent runs one task and stops. An AI employee owns a role — it watches, follows up, and acts over time, like a colleague with a job description. <a href="ai-employees.html" style="color:var(--blue);font-weight:600">Read the full comparison →</a></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can an agent do things in my browser? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="faq-a"><p>Yes. Our in-browser agent clicks, types and extracts across the web for tools that have no API. <a href="browser-agent.html" style="color:var(--blue);font-weight:600">See how it works →</a></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="cta-box reveal">
+      <span class="eyebrow" style="background:rgba(255,255,255,.1);color:#fff">Start today</span>
+      <h2 class="h2" style="color:#fff">Ready to put AI to work in ERPNext?</h2>
+      <p class="lede">Book a free 30-minute consultation. We'll audit your current workflows and map your first automated process — no commitment.</p>
+      <div class="hero-cta">
+        <a class="btn btn-green" href="mailto:info@erpnext.lk?subject=Free%20consultation%20—%20ERPNext%20AI%20automation">Email info@erpnext.lk</a>
+        <button class="btn btn-ghost" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.2)" data-modal="Consultation request noted" data-modal-desc="We'll email you three time slots for this week (Colombo time). Or call Sanath's team directly at +94 11 200 0000.">Call Sanath's team</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:1rem">
+          <span class="logo-badge" style="background:#fff;color:var(--ink)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg></span>
+          <span class="logo-name" style="color:#fff">erpnext<span style="color:var(--green)">.lk</span></span>
+        </div>
+        <p style="font-size:.88rem;max-width:16rem;color:#7c829a">Business process automation consulting via ERPNext v16 + AI for Sri Lankan and Indian enterprises.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <a href="ai-employees.html">AI Employees</a>
+        <a href="browser-agent.html">In-Browser Agent</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="how-it-works.html">How It Works</a>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <a href="index.html#features">Invoice Automation</a>
+        <a href="index.html#features">Payroll &amp; HR</a>
+        <a href="index.html#features">Inventory Control</a>
+        <a href="index.html#features">CRM Routing</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="index.html#faq">FAQ</a>
+        <a href="mailto:info@erpnext.lk">Contact</a>
+        <a href="#" data-modal="Privacy Policy" data-modal-desc="Full privacy policy ships with the production deployment. Draft v1 is pending legal review.">Privacy</a>
+        <a href="#" data-modal="Terms of Service" data-modal-desc="Full terms of service ship with the production deployment. Draft v1 is pending legal review.">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 erpnext.lk — All rights reserved. Powered by ERPNext v16 &amp; an autonomous AI fleet. Built in Colombo.</div>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-x" data-close aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    <div class="modal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.4-6.3-4.5-6.3 4.5L8 13.6 2 9.2h7.6z"/></svg></div>
+    <h3 class="h3" id="modalTitle">ERPNext.LK</h3>
+    <p style="color:var(--ink-70);font-size:.92rem;margin:1rem 0 1.5rem" id="modalDesc">Loading…</p>
+    <button class="btn btn-primary" style="width:100%" data-close>Close window</button>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
